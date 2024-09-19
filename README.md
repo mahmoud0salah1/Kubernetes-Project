@@ -7,13 +7,13 @@ This project demonstrates the deployment of a three-tier application consisting 
 
 ## Project Structure
 
-- **Backend**: Written in Go, exposed on port 8000.
+- **Backend**: exposed on port 8000.
 - **Database**: MySQL database for data storage.
 - **Proxy**: Nginx configured to route traffic to the backend service.
 
 ## Features
 
-- Each tier is deployed with 2 replicas for redundancy.
+- Each tier is deployed with 2 replicas for redundancy ,Except for the database only has one replica .
 - Database credentials are mounted into the pods from the host machine.
 - Services are configured to group each tier, allowing communication between them.
 - The proxy communicates with the backend service to handle client requests.
